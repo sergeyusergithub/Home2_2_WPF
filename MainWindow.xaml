@@ -1,0 +1,131 @@
+﻿<Window x:Class="Home2_2_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Home2_2_WPF"
+        mc:Ignorable="d"
+        Title="Агенство фотографий" WindowState="Maximized"  Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+     
+        
+        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+            <Viewbox>
+                <TextBlock Margin="10">
+                   <Run FontSize="20" FontFamily="Impact" Foreground="DarkGray">Наши лучшие работы</Run>
+                </TextBlock>
+            </Viewbox>
+
+            <ScrollViewer VerticalScrollBarVisibility="Visible">
+                <StackPanel>
+
+                    <Image Source="Image/image1.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment ="Center" FontSize="16" FontFamily="Impact">
+                            <Run>Антон</Run>
+                    </TextBlock>
+
+                    <Image Source="Image/image2.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment ="Center" FontSize="16" FontFamily="Impact">
+                            <Run>Не Антон</Run>
+                    </TextBlock>
+
+                    <Image Source="Image/image3.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment ="Center" FontSize="16" FontFamily="Impact">
+                             <Run>Антонов</Run>
+                    </TextBlock>
+
+                    <Image Source="Image/image4.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment ="Center" FontSize="16" FontFamily="Impact">
+                            <Run>Неизвестное1</Run>
+                    </TextBlock>
+
+                    <Image Source="Image/image5.jpg" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment ="Center" FontSize="16" FontFamily="Impact">
+                                <Run>Неизвестное2</Run>
+                    </TextBlock>
+
+                    <Image Source="Image/image1.jfif" MaxHeight="150px"></Image>
+                    <TextBlock HorizontalAlignment ="Center" FontSize="16" FontFamily="Impact">
+                            <Run>Неизвестное3</Run>
+                    </TextBlock>
+
+                </StackPanel>
+            </ScrollViewer>
+            
+        </StackPanel>
+
+        <TabControl Grid.Column="1">
+            <TabItem Header="Инструменты" IsSelected="True">
+                <StackPanel Orientation="Vertical">
+                    <Menu>
+                        <MenuItem Header="Файл">
+                            <MenuItem Header="Новый"></MenuItem>
+                            <MenuItem Header="Открыть"></MenuItem>
+                        </MenuItem>
+                        <MenuItem Header="Редактировать">
+                            <MenuItem Header="Обрезать">
+                                <MenuItem Header="Обрезать квадрат"></MenuItem>
+                                <MenuItem Header="Произвольная обрезка"></MenuItem>
+                            </MenuItem>
+                            <MenuItem Header="Изменить цвет"></MenuItem>
+                        </MenuItem>
+                    </Menu>
+
+                    <TextBlock>
+                        <Run FontSize="20" FontFamily="Impact">Услуги</Run>
+                    </TextBlock>
+                    
+                    <ListBox BorderThickness="0">
+                        <ListBoxItem>
+                            <TextBlock>
+                                <Run>Фотография</Run>
+                            </TextBlock>
+                         </ListBoxItem>
+
+                        <ListBoxItem>
+                            <TextBlock>
+                                <Run>Ретуширование</Run>
+                            </TextBlock>
+                        </ListBoxItem>
+
+                        <ListBoxItem>
+                            <TextBlock>
+                                <Run>Исправление недостатков</Run>
+                            </TextBlock>
+                        </ListBoxItem>
+
+                        <ListBoxItem>
+                            <TextBlock>
+                                <Run>Изменение фона</Run>
+                            </TextBlock>
+                        </ListBoxItem>
+                        <ListBox.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Редактировать"></MenuItem>
+                                <MenuItem Header="Удалить"></MenuItem>
+                                <MenuItem Header="Создать на основе"></MenuItem>
+                            </ContextMenu>
+                        </ListBox.ContextMenu>
+                    </ListBox>
+
+                </StackPanel>
+                
+            </TabItem>
+            <TabItem Header="Расписание">
+                
+            </TabItem>
+        </TabControl>
+
+        <Viewbox Grid.Column="2" VerticalAlignment="Top">
+            <Calendar SelectionMode="SingleRange"></Calendar>
+        </Viewbox>
+        
+ 
+
+    </Grid>
+</Window>
