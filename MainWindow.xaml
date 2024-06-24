@@ -21,7 +21,7 @@
                 </TextBlock>
             </Viewbox>
 
-            <ScrollViewer VerticalScrollBarVisibility="Visible">
+            <ScrollViewer Height="650" VerticalScrollBarVisibility="Visible">
                 <StackPanel>
 
                     <Image Source="Image/image1.jpg" MaxHeight="150px"></Image>
